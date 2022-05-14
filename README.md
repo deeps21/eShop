@@ -1,2 +1,2 @@
 # eShop
-e-Commerce website for electronic gadgets using MEAN stack
+e-Commerce website for electronic gadgets using MEAN stack!!
