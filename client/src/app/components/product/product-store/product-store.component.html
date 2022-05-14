@@ -1,0 +1,39 @@
+<ng-template [ngIf]="Products">
+  <div class="top">
+    <pagination-controls
+      (pageChange)="pageChanged($event)"
+      maxSize="{{maxPages}}"
+      directionLinks="true"
+      autoHide="true"
+      responsive="true"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+  </div>
+  <div class="Products-store">
+    <app-Product *ngFor="let Product of Products | paginate: {
+    itemsPerPage: pageSize,
+    currentPage: currentPage,
+    totalItems: total }" [Product]="Product"></app-Product>
+  </div>
+  <div *ngIf="Products.length === 0" class="no-results">
+    <img src="https://i.imgur.com/KRVihMq.png" alt="no-item-found">
+  </div>
+  <div class="bottom">
+    <pagination-controls
+      (pageChange)="pageChanged($event)"
+      maxSize="{{maxPages}}"
+      directionLinks="true"
+      autoHide="true"
+      responsive="true"
+      previousLabel="Previous"
+      nextLabel="Next"
+      screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page"
+      screenReaderCurrentLabel="You're on page">
+    </pagination-controls>
+  </div>
+</ng-template>

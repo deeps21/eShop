@@ -1,0 +1,39 @@
+.Product-details {
+  width: 100%;
+}
+
+.Product-details img {
+  border-radius: 5px;
+}
+
+.Product-info {
+  padding: 30px;
+  background-color: #313532;
+  border-radius: 15px;
+}
+
+.Product-info a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.Product-info button {
+  margin: 10px 10px 10px 0;
+}
+
+.Product-description {
+  text-align: justify;
+}
+
+.Product-details div {
+  margin: 50px auto;
+  text-align: left;
+}
+
+.checked {
+  color: orange;
+}
+
+#admin-panel {
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+<h1>Online Electronic Shop</h1>
+<div *ngIf="mostPurchasedproducts" class="products-home">
+  <div class="panel">
+    <h2>Most Purchased Products</h2>
+  </div>
+  <app-product *ngFor="let product of mostPurchasedproducts" [product]="product"></app-product>
+</div>
+<div *ngIf="bestRatedproducts" class="products-home">
+  <div class="panel">
+    <h2>Best Rated Products</h2>
+  </div>
+  <app-product *ngFor="let product of bestRatedproducts" [product]="product"></app-product>
+</div>
+<div *ngIf="newestproducts" class="products-home">
+  <div class="panel">
+    <h2>Newest Products</h2>
+  </div>
+  <app-product *ngFor="let product of newestproducts" [product]="product"></app-product>
+</div>

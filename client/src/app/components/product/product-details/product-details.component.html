@@ -1,0 +1,41 @@
+<div *ngIf="Product" class="row Product-details">
+  <div class="col-1">
+    <img src="{{Product.cover}}" alt="Product-cover" />
+  </div>
+  <div class="col-7 Product-info">
+    <h3>{{Product.title}}</h3>
+    <span class="fa fa-star {{stars[0]}}" (click)="rateProduct(1)" (mouseenter)="calcRating(1)" (mouseleave)="resetRating()"></span>
+    <span class="fa fa-star {{stars[1]}}" (click)="rateProduct(2)" (mouseenter)="calcRating(2)" (mouseleave)="resetRating()"></span>
+    <span class="fa fa-star {{stars[2]}}" (click)="rateProduct(3)" (mouseenter)="calcRating(3)" (mouseleave)="resetRating()"></span>
+    <span class="fa fa-star {{stars[3]}}" (click)="rateProduct(4)" (mouseenter)="calcRating(4)" (mouseleave)="resetRating()"></span>
+    <span class="fa fa-star {{stars[4]}}" (click)="rateProduct(5)" (mouseenter)="calcRating(5)" (mouseleave)="resetRating()"></span>
+    <p>based on {{Product.ratedCount}} ratings</p>
+    <p>{{Product.comments.length}} comments</p>
+    <p>Seller: {{Product.author}}</p>
+    <p>Category: {{Product.genre}}</p>
+    <p>Manufacturing Year: {{Product.year}}</p>
+    <p>Serial Number: {{Product.isbn}}</p>
+    <p>Weight(in grams): {{Product.pagesCount}}</p>
+    <p class="Product-description">Description: {{Product.description}}</p>
+    <h2>Price: {{Product.price}} &#x24;</h2>
+    <ng-template [ngIf]="isLogged">
+      <button class="btn btn-success" (click)="buyProduct()" [disabled]="isBought">Buy Item</button>
+      <button class="btn btn-secondary" (click)="addToFavorites()" [disabled]="isAdded">Add to Wishlist</button>
+    </ng-template>
+    <ng-template [ngIf]="isAdmin">
+      <div id="admin-panel">
+        <a class="btn btn-warning" routerLink="/Product/edit/{{Product._id}}">Edit Item</a>
+        <a class="btn btn-danger" routerLink="/Product/delete/{{Product._id}}">Delete Item</a>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="!isLogged">
+      <button class="btn btn-secondary" (click)="login()">Login to Buy, Rate and Comment</button>
+    </ng-template>
+  </div>
+</div>
+<ng-template [ngIf]="Product">
+  <app-comment [ProductId]="ProductId" [isLogged]="isLogged" [isAdmin]="isAdmin" [userId]="userId"></app-comment>
+</ng-template>
+<div [hidden]="Product" class="no-results">
+  <img src="https://i.imgur.com/KRVihMq.png" alt="no-item-found">
+</div>

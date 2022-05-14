@@ -1,0 +1,36 @@
+#profile {
+  margin-top: 40px !important;
+}
+
+#avatar {
+  width: 150px;
+  height: 150px;
+}
+
+#avatar-input {
+  width: 50%;
+  margin: 10px auto;
+  background-color: rgb(128, 129, 129);
+}
+
+.admin-panel button {
+  margin-left: 5px;
+}
+
+.favorite-products {
+  margin-bottom: 30px;
+}
+
+.favorite-products h2 {
+  font-family: 'Verdana', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color:black
+}
+
+.no-favorite {
+  margin-bottom: 11.6em;
+}
+.font-color-black{
+  color: black;
+}
