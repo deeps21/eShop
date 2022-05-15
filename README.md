@@ -1,12 +1,14 @@
 # eShop
 <h1> Online Electric Store </h1>
 
-Technologies
+## Tech Stack
 
-MongoDB
-Express js
-Node js
-Angular
+**Client:** Angular, NGRX
+
+**Server:** Node, Express
+
+**Database**: MongoDB
+
 
 
 Features
