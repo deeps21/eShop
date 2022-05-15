@@ -28,7 +28,7 @@ The website displays electronic products. Users can add and remove products to/f
 
 <h3>many to many:</h3>
 <ul>
-<li>multiple users can give review/comments on many product.</li>
+<li>multiple users can give review/comments on many product .</li>
 </ul>
 
 
