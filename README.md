@@ -1,5 +1,5 @@
 # eShop
-e-Commerce website for electronic gadgets using MEAN stack!!
+<h1> Online Electric Store </h1>
 
 Technologies
 
